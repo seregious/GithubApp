@@ -13,6 +13,10 @@ class MainViewModel: ViewModel() {
 
     var repList = MutableLiveData<List<Rep>>()
 
+    val selectedRep: MutableLiveData<Rep> by lazy {
+        MutableLiveData<Rep>()
+    }
+
     val networkStatus: MutableLiveData<Boolean> by lazy {
         MutableLiveData<Boolean>()
     }

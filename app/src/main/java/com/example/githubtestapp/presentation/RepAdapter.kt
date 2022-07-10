@@ -8,7 +8,9 @@ import com.example.githubtestapp.R
 import com.example.githubtestapp.databinding.RepCardBinding
 import com.example.githubtestapp.domain.Rep
 
-class RepAdapter: RecyclerView.Adapter<RepAdapter.RepHolder>() {
+class RepAdapter(
+    val listener: Listener
+): RecyclerView.Adapter<RepAdapter.RepHolder>() {
 
     var repList: List<Rep> = listOf()
         set(value) {
@@ -19,10 +21,13 @@ class RepAdapter: RecyclerView.Adapter<RepAdapter.RepHolder>() {
     class RepHolder(view: View): RecyclerView.ViewHolder(view) {
         private var binding = RepCardBinding.bind(view)
 
-        fun bind(rep: Rep) = with(binding){
+        fun bind(rep: Rep, listener: Listener) = with(binding){
             repName.text = rep.name
             repLanguage.text = rep.language
             repDescription.text = rep.description
+            itemView.setOnClickListener {
+                listener.onClick(rep)
+            }
         }
     }
 
@@ -32,10 +37,14 @@ class RepAdapter: RecyclerView.Adapter<RepAdapter.RepHolder>() {
     }
 
     override fun onBindViewHolder(holder: RepHolder, position: Int) {
-        holder.bind(repList[position])
+        holder.bind(repList[position], listener)
     }
 
     override fun getItemCount(): Int {
         return repList.size
+    }
+
+    interface Listener {
+        fun onClick(rep: Rep)
     }
 }

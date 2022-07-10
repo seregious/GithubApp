@@ -10,4 +10,11 @@
     <string name="sign_in_button">SIGN IN</string>
     <string name="token_string">Personal access token</string>
     <string name="github_logo">Github logo</string>
+    
+    <string name="rep_link">Rep Link</string>
+    <string name="rep_license">Rep License</string>
+    <string name="rep_stars">Stars</string>
+    <string name="rep_forks">Forks</string>
+    <string name="rep_watchers">Watchers</string>
+    <string name="rep_readme">Readme</string>
 </resources>
