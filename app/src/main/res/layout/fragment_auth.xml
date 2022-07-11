@@ -52,10 +52,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:contentDescription="@string/github_logo"
+            android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@drawable/ic_github_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
