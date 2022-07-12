@@ -9,7 +9,7 @@ import com.example.githubtestapp.databinding.RepCardBinding
 import com.example.githubtestapp.domain.Rep
 
 class RepAdapter(
-    val listener: Listener
+    private val listener: Listener
 ): RecyclerView.Adapter<RepAdapter.RepHolder>() {
 
     var repList: List<Rep> = listOf()

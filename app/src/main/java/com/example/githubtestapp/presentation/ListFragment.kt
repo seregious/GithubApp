@@ -19,6 +19,8 @@ class ListFragment : Fragment(), RepAdapter.Listener {
     private lateinit var adapter: RepAdapter
     private val viewModel: MainViewModel by activityViewModels()
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

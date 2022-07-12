@@ -16,7 +16,8 @@
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:text="@string/rep_link"
-        android:textColor="#2196F3" />
+        android:textColor="#2196F3"
+        android:autoLink="web"/>
 
     <LinearLayout
         android:layout_width="match_parent"
